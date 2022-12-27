@@ -119,7 +119,9 @@
 (define-derived-mode panda-mode prog-mode "Panda"
   "A major mode for the Panda programming language."
   :syntax-table panda-mode-syntax-table
-  (setq-local font-lock-defaults '(panda-font-lock-keywords)))
+  (setq-local font-lock-defaults '(panda-font-lock-keywords))
+  (setq-local comment-start "// ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.panda\\'" . panda-mode))
